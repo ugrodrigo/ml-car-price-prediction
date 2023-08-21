@@ -1,5 +1,5 @@
 streamlit
 pandas
 datetime
-sklearn
+scikit-learn
 xgboost==1.7.6
