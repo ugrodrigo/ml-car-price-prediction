@@ -38,6 +38,9 @@ def main():
 
     s2 = st.selectbox("Are you a Dealer or Individual?", ('Dealer','Individual'))
 
+    p6 = False
+    p7 = False
+
     if s2 == "Dealer":
         p6=True
         p7=False
@@ -46,6 +49,9 @@ def main():
         p7=True
 
     s3 = st.selectbox("What is the transmission type?", ('Automatic','Manual'))
+
+    p8=False
+    p9=False  
 
     if s2 == "Dealer":
         p8=True
@@ -58,7 +64,7 @@ def main():
 
     now_time = datetime.datetime.now()
 
-    years = st.number_input("In which year car was purchased?",1990,now_time.year)
+    years = st.slider("In which year car was purchased?",1990,now_time.year)
     p11 = now_time.year - years
 
     model = xgb.XGBRegressor()
