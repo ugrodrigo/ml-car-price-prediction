@@ -1,4 +1,4 @@
 streamlit
 pandas
 datetime
-xgboost
+xgboost==1.7.6
